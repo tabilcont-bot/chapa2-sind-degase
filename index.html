@@ -928,6 +928,51 @@
             font-weight: 600;
         }
 
+
+        /* Botão WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1200;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #25D366;
+            color: #0b1120;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding: 0.85rem 1.25rem;
+            border-radius: 999px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-inline-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            background: #25D366;
+            color: #0b1120 !important;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding: 0.72rem 1.2rem;
+            border-radius: var(--radius-sm);
+            transition: background 0.2s ease;
+        }
+
+        .whatsapp-inline-btn:hover {
+            background: #1ebe5d;
+        }
+
         footer {
             border-top: 1px solid var(--border);
             padding: 2.25rem 1.5rem;
@@ -954,7 +999,7 @@
             <a href="#eixos">Eixos do Plano</a>
             <a href="#matriz-pautas">Blindagem & Pautas</a>
             <a href="#buscas">Inteligência Probatória</a>
-            <a href="#igcp-piso">IGCP & Piso R$ 9.600</a>
+            <a href="#igcp-piso">IGCP & Estrutura Remuneratória</a>
             <a href="#roteiro">Roteiro Tático</a>
             <a href="#chapa">Composição</a>
             <a href="#sugestoes" class="nav-cta">Enviar Sugestão</a>
@@ -979,9 +1024,9 @@
 
         <div class="kpi-grid">
             <div class="kpi-card">
-                <div class="kpi-label">Piso Inicial Proposto</div>
-                <div class="kpi-value gold">R$ 9.600,00</div>
-                <div class="kpi-sub">Nível Superior + Complexidade + Amortização</div>
+                <div class="kpi-label">Arquitetura Remuneratória</div>
+                <div class="kpi-value gold">3 Pilares</div>
+                <div class="kpi-sub">Qualificação + Complexidade + Amortização</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Índice IGCP Comprovado</div>
@@ -996,7 +1041,7 @@
             <div class="kpi-card">
                 <div class="kpi-label">Verbas Indenizatórias</div>
                 <div class="kpi-value">Impacto 0% LRF</div>
-                <div class="kpi-sub">Auxílio-Fardamento + Cartão Natal (R$ 1.000+IPCA)</div>
+                <div class="kpi-sub">Auxílio-Fardamento + Abono Natalino (IPCA)</div>
             </div>
         </div>
     </div>
@@ -1319,7 +1364,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>1. Nível Superior e Salário Inicial de R$ 9.600,00</strong></td>
+                        <td><strong>1. Nível Superior e Reestruturação do Vencimento Inicial</strong></td>
                         <td>Ingresso por graduação superior. Subsídio inicial composto por Qualificação (50%), Complexidade IGCP 96/100 (30%) e Amortização de Abalos (20%).</td>
                         <td>Art. 39, § 1º, I a III da CF/88 (remuneração conforme complexidade e risco) c/c Lei nº 12.594/2012 (SINASE).</td>
                         <td><span class="pill pill-blue">Buscas 1, 3 e 4</span><br><small>Perfil infracional, IGCP 96/100 e leis estaduais.</small></td>
@@ -1331,7 +1376,7 @@
                         <td><span class="pill pill-gold">Buscas 2 e 3</span><br><small>Rubrica 3.3.90.93 e desgaste em contenções.</small></td>
                     </tr>
                     <tr>
-                        <td><strong>3. Cartão de Natal (Mín. R$ 1.000,00 + IPCA)</strong></td>
+                        <td><strong>3. Cartão de Natal (Abono Alimentar + Correção IPCA)</strong></td>
                         <td>Abono Alimentar Extraordinário de Fim de Ano (indenizatório), corrigido anualmente via ato administrativo pelo IPCA acumulado.</td>
                         <td>Contorna a Súmula Vinculante 42 do STF por ser verba indenizatória de custeio alimentar (Art. 19, § 1º da LRF).</td>
                         <td><span class="pill pill-gold">Buscas 2 e 4</span><br><small>Superávit na rubrica 3.3.90.46 e precedentes IPCA.</small></td>
@@ -1427,7 +1472,7 @@
                 <li><strong>Auditoria do Custo de Substituição:</strong> Montante gasto nos últimos 5 exercícios com horas extras, plantões extraordinários e diárias operacionais para cobrir déficits gerados por licenças médicas.</li>
             </ul>
             <div class="busca-impact">
-                <strong>Aplicação Estratégica:</strong> Comprova matematicamente à Fazenda que a Jornada de 30h (Escala 24x96) e as Férias Profiláticas (30+30 dias) estancam gastos com horas extras e afastamentos, fundamentando a Parcela de Amortização Biopsicossocial (R$ 1.920,00) e o custeio do BADS (Art. 39, § 7º da CF/88).
+                <strong>Aplicação Estratégica:</strong> Comprova matematicamente à Fazenda que a Jornada de 30h (Escala 24x96) e as Férias Profiláticas (30+30 dias) estancam gastos com horas extras e afastamentos, fundamentando a Parcela de Amortização Biopsicossocial (20% da composição) e o custeio do BADS (Art. 39, § 7º da CF/88).
             </div>
         </div>
 
@@ -1441,7 +1486,7 @@
                 <li><strong>Excesso de Arrecadação e Janelas LDO/LOA:</strong> Superávit tributário corrente e calendário da Comissão de Orçamento da ALERJ para inserção de emendas autorizativas.</li>
             </ul>
             <div class="busca-impact">
-                <strong>Aplicação Estratégica:</strong> Desarma a desculpa de "falta de margem na LRF". Comprova que o Auxílio-Fardamento Anual e o Cartão de Natal de R$ 1.000,00 + IPCA têm impacto zero no índice de pessoal e podem ser aprovados imediatamente.
+                <strong>Aplicação Estratégica:</strong> Desarma a desculpa de "falta de margem na LRF". Comprova que o Auxílio-Fardamento Anual e o Cartão de Natal corrigido anualmente pelo IPCA têm impacto zero no índice de pessoal e podem ser aprovados imediatamente.
             </div>
         </div>
 
@@ -1455,7 +1500,7 @@
                 <li><strong>Relação Biopsicossocial e Proporção Operacional:</strong> Faixa etária de 12 a 21 anos (pico de força muscular e imaturidade do córtex pré-frontal) confrontada com o déficit numérico Agente por Adolescente.</li>
             </ul>
             <div class="busca-impact">
-                <strong>Aplicação Estratégica:</strong> Fornece a prova material para sustentar a nota 96,0/100 no IGCP, tornando obrigatória a transição para o Nível Superior e justificando o Adicional Incorporado de Complexidade (R$ 2.880,00).
+                <strong>Aplicação Estratégica:</strong> Fornece a prova material para sustentar a nota 96,0/100 no IGCP, tornando obrigatória a transição para o Nível Superior e justificando o Adicional Incorporado de Complexidade (30% da composição).
             </div>
         </div>
 
@@ -1474,12 +1519,12 @@
         </div>
     </section>
 
-    <!-- SEÇÃO 4: TABELAS INFORMATIVAS 2 E 3 - MATRIZ IGCP (96/100) E COMPOSIÇÃO DO PISO R$ 9.600 -->
+    <!-- SEÇÃO 4: MATRIZ IGCP (96/100) E TÓPICOS DA COMPOSIÇÃO REMUNERATÓRIA -->
     <section id="igcp-piso" class="section-block">
         <div class="section-header">
             <span class="section-tag">Consolidação Técnica & Atuarial</span>
-            <h2>Índice Global de Complexidade (IGCP) & Composição do Piso Salarial</h2>
-            <p>Conversão objetiva da realidade operacional das unidades em pontuação técnica (96,0/100) para fundamentar o vencimento básico inicial de R$ 9.600,00.</p>
+            <h2>Índice Global de Complexidade (IGCP) & Estrutura da Remuneração</h2>
+            <p>Conversão objetiva da realidade operacional das unidades em pontuação técnica (96,0/100) e os tópicos estruturantes que compõem a remuneração e as possibilidades de implementação fiscal.</p>
         </div>
 
         <div class="two-col-grid">
@@ -1545,43 +1590,38 @@
                 </table>
             </div>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Componente Remuneratório</th>
-                            <th>Peso</th>
-                            <th>Valor Base</th>
-                            <th>Fundamentação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>1. Parcela de Qualificação Técnica</strong><br><small style="color:var(--text-secondary)">Nível Superior</small></td>
-                            <td>50%</td>
-                            <td><strong>R$ 4.800,00</strong></td>
-                            <td>Exigência cognitiva interdisciplinar (Direito, Psicologia, Criminologia) e responsabilidade jurídica no PIA (Busca 4).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>2. Adicional Incorporado de Complexidade</strong><br><small style="color:var(--text-secondary)">IGCP 96/100</small></td>
-                            <td>30%</td>
-                            <td><strong>R$ 2.880,00</strong></td>
-                            <td>Tríade funcional desarmada perante custodiados faccionados em pico de vigor físico (Busca 3).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>3. Parcela de Amortização Biopsicossocial</strong><br><small style="color:var(--text-secondary)">Risco Extramuros</small></td>
-                            <td>20%</td>
-                            <td><strong>R$ 1.920,00</strong></td>
-                            <td>Amortização de custos com moradia/transporte seguro fora de áreas de facção e saúde mental (Busca 1).</td>
-                        </tr>
-                        <tr class="tr-total">
-                            <td>VENCIMENTO BÁSICO / SUBSÍDIO INICIAL</td>
-                            <td>100%</td>
-                            <td>R$ 9.600,00</td>
-                            <td>+ Auxílio-Alimentação, Auxílio-Fardamento e Cartão Natal (R$ 1.000 + IPCA) indenizatórios (Busca 2).</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="subtopic-box">
+                    <h4>1. Parcela de Qualificação Técnica (Peso 50%) — Nível Superior</h4>
+                    <ul class="proposta-list">
+                        <li><strong>O que compõe:</strong> Base estrutural do vencimento vinculada à exigência de graduação superior e domínio interdisciplinar (Direito Infracional, Psicologia, Criminologia e elaboração de relatórios judiciais).</li>
+                        <li><strong>Possibilidades de implementação:</strong> Enquadramento por simetria com as carreiras típicas de Estado e da segurança pública (Art. 39, § 1º da CF/88), com escalonamento previsto na LDO/LOA e cumprimento integral da lei estadual de nível superior já aprovada.</li>
+                    </ul>
+                </div>
+
+                <div class="subtopic-box">
+                    <h4>2. Adicional Incorporado de Complexidade (Peso 30%) — IGCP 96/100</h4>
+                    <ul class="proposta-list">
+                        <li><strong>O que compõe:</strong> Gratificação permanente ligada à tríade funcional desarmada (contenção, suporte socioeducativo e referência normativa 24h) diante de custodiados em pico de vigor físico.</li>
+                        <li><strong>Possibilidades de implementação:</strong> Incorporação direta ao vencimento-base ou subsídio via Plano de Cargos e Salários (PCS), impedindo perdas na aposentadoria e refletindo o grau extremo de penosidade (96,0 pontos).</li>
+                    </ul>
+                </div>
+
+                <div class="subtopic-box">
+                    <h4>3. Parcela de Amortização Biopsicossocial (Peso 20%) — Risco Extramuros</h4>
+                    <ul class="proposta-list">
+                        <li><strong>O que compõe:</strong> Compensação pelo desgaste neuroendócrino crônico (Burnout, TEPT) e pela vulnerabilidade social fora do plantão decorrente de ameaças faccionadas.</li>
+                        <li><strong>Possibilidades de implementação:</strong> Custeio compensado pela redução comprovada de afastamentos médicos (CID F, M e I) e queda de horas extras com a adoção da escala 24x96 e férias semestrais.</li>
+                    </ul>
+                </div>
+
+                <div class="subtopic-box" style="border-color: rgba(234, 179, 8, 0.45);">
+                    <h4>4. Verbas Indenizatórias e Prêmio de Produtividade (Fora do Teto da LRF)</h4>
+                    <ul class="proposta-list">
+                        <li><strong>Pacote Indenizatório Imediato:</strong> Auxílio-Alimentação majorado, Auxílio-Fardamento semestral/anual e Cartão de Natal corrigido pelo IPCA — enquadrados em "Outras Despesas Correntes" (Art. 19, § 1º da LRF), com impacto zero no limite de pessoal.</li>
+                        <li><strong>Prêmio Anual de Desempenho (BADS):</strong> Bonificação anual (equivalente ao 14º salário) vinculada a metas objetivas e financiada pela economia com despesas correntes (Art. 39, § 7º da CF/88).</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -1613,7 +1653,7 @@
             <div class="phase-card">
                 <span class="phase-days">Fase 4 • Mesa Permanente</span>
                 <h4>Negociação Desmembrada na Casa Civil</h4>
-                <p>Exigir sanção imediata do Pacote Indenizatório e Profilático (impacto zero na LRF) combinada ao cronograma vinculante no PPA/LDO para Nível Superior, Piso de R$ 9.600,00 e BADS (14º Salário).</p>
+                <p>Exigir sanção imediata do Pacote Indenizatório e Profilático (impacto zero na LRF) combinada ao cronograma vinculante no PPA/LDO para Nível Superior, Reestruturação Remuneratória Integrada e BADS (14º Salário).</p>
             </div>
         </div>
     </section>
@@ -1660,10 +1700,15 @@
 
     <!-- SEÇÃO 7: FORMULÁRIO DE SUGESTÕES E COMENTÁRIOS -->
     <section id="sugestoes" class="section-block">
-        <div class="section-header">
-            <span class="section-tag">Construção Coletiva da Base</span>
-            <h2>Canal Aberto de Sugestões e Comentários</h2>
-            <p>Envie sua proposta, relato de unidade ou contribuição técnica para aprimorar o Plano de Ação da Chapa Sempre na Luta.</p>
+        <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+            <div>
+                <span class="section-tag">Construção Coletiva da Base</span>
+                <h2>Canal Aberto de Sugestões e Comentários</h2>
+                <p>Envie sua proposta, relato de unidade ou contribuição técnica para aprimorar o Plano de Ação da Chapa Sempre na Luta.</p>
+            </div>
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1%2C%20Chapa%20Sempre%20na%20Luta!%20Gostaria%20de%20enviar%20uma%20sugest%C3%A3o%20para%20o%20Plano%20de%20A%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="whatsapp-inline-btn" id="btnWhatsappSecao">
+                <span>💬 Falar no WhatsApp da Chapa</span>
+            </a>
         </div>
 
         <div class="feedback-container">
@@ -1731,7 +1776,7 @@
                             <span class="feed-author">Comissão Técnica • Engenharia Orçamentária</span>
                             <span class="feed-tag">Eixo 1 - Salário e Carreira</span>
                         </div>
-                        <div class="feed-text">Destacar na Mesa de Negociação que o Auxílio-Fardamento e o Cartão de Natal (R$ 1.000 + IPCA) saem das rubricas 3.3.90.93 e 3.3.90.46, sem impactar o teto da LRF.</div>
+                        <div class="feed-text">Destacar na Mesa de Negociação que o Auxílio-Fardamento e o Cartão de Natal (corrigido pelo IPCA) saem das rubricas 3.3.90.93 e 3.3.90.46, sem impactar o teto da LRF.</div>
                         <span class="feed-date">Contribuição verificada • Dossiê Estratégico</span>
                     </div>
                 </div>
@@ -1805,7 +1850,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var storageKey = "sempre_na_luta_sugestoes_v3";
 
     function escapeHtml(text) {
-        var map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", """: "&quot;", "'": "&#039;" };
+        var map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
         return String(text).replace(/[&<>"']/g, function (m) { return map[m]; });
     }
 
@@ -1886,6 +1931,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 </script>
+
+
+<a href="https://wa.me/5521999999999?text=Ol%C3%A1%2C%20Chapa%20Sempre%20na%20Luta!%20Gostaria%20de%20participar%20e%20enviar%20minha%20sugest%C3%A3o." target="_blank" rel="noopener noreferrer" class="whatsapp-float" id="btnWhatsappFloat" aria-label="WhatsApp Chapa Sempre na Luta">
+    <span>💬 WhatsApp da Chapa</span>
+</a>
 
 </body>
 </html>
