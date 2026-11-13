@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapa 2 - Sempre na Luta | SINDDEGASE</title>
+    <style>
+        :root {
+            --azul-escuro: #061c42;
+            --azul-royal: #0a368a;
+            --azul-claro: #1557c0;
+            --amarelo: #ffd000;
+            --amarelo-hover: #e6bb00;
+            --branco: #ffffff;
+            --cinza-fundo: #f0f4f8;
+            --texto: #1a202c;
+            --whatsapp: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-fundo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho Hero */
+        header {
+            background: radial-gradient(circle at top, var(--azul-claro), var(--azul-escuro));
+            color: var(--branco);
+            text-align: center;
+            padding: 3.5rem 1.5rem 4rem;
+            border-bottom: 6px solid var(--amarelo);
+        }
+
+        .tag-luta {
+            display: inline-block;
+            background-color: var(--amarelo);
+            color: var(--azul-escuro);
+            font-weight: 900;
+            padding: 0.4rem 1.2rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            transform: rotate(-1deg);
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        header h1 span {
+            color: var(--amarelo);
+        }
+
+        header .subtitulo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            max-width: 720px;
+            margin: 0 auto 2rem;
+            color: #e2e8f0;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--whatsapp);
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+            text-transform: uppercase;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            transform: translateY(-3px);
+        }
+
+        /* Container Geral */
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .titulo-secao h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--azul-escuro);
+            text-transform: uppercase;
+        }
+
+        .titulo-secao .barra {
+            width: 80px;
+            height: 5px;
+            background-color: var(--amarelo);
+            margin: 0.5rem auto 0;
+            border-radius: 3px;
+        }
+
+        /* Seção Nossas Bandeiras */
+        .grid-bandeiras {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card-bandeira {
+            background: var(--branco);
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border-left: 6px solid var(--azul-royal);
+            transition: transform 0.2s;
+        }
+
+        .card-bandeira:hover {
+            transform: translateY(-4px);
+            border-left-color: var(--amarelo);
+        }
+
+        .card-bandeira h3 {
+            color: var(--azul-escuro);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .check-icon {
+            background-color: var(--amarelo);
+            color: var(--azul-escuro);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .card-bandeira p {
+            color: #4a5568;
+            font-size: 0.98rem;
+        }
+
+        /* Seção Candidato / Liderança */
+        .perfil-box {
+            background: var(--branco);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 4rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2.5rem;
+            border-top: 6px solid var(--azul-royal);
+        }
+
+        .perfil-foto {
+            flex: 1 1 280px;
+            text-align: center;
+        }
+
+        .perfil-foto img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 4px solid var(--amarelo);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .perfil-texto {
+            flex: 2 1 400px;
+        }
+
+        .perfil-texto .cargo {
+            display: inline-block;
+            background: var(--azul-escuro);
+            color: var(--amarelo);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .perfil-texto h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--azul-escuro);
+            margin-bottom: 0.5rem;
+        }
+
+        .perfil-texto blockquote {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--azul-royal);
+            border-left: 4px solid var(--amarelo);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        .perfil-texto p {
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        /* Seção Mobilização WhatsApp */
+        .cta-grupo {
+            background: linear-gradient(135deg, var(--azul-escuro), var(--azul-royal));
+            color: var(--branco);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            border: 3px solid var(--amarelo);
+        }
+
+        .cta-grupo h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--amarelo);
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .cta-grupo p {
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+        }
+
+        .qr-container {
+            margin: 1.5rem auto;
+            max-width: 260px;
+            background: var(--branco);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .qr-container img {
+            width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 4px solid var(--amarelo);
+        }
+
+        footer strong {
+            color: var(--amarelo);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.3rem; }
+            .perfil-box { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="tag-luta">Sempre na Luta • SINDDEGASE</div>
+        <h1>CHAPA <span>2</span></h1>
+        <p class="subtitulo">Por um SINDDEGASE mais forte, transparente, atuante e comprometido com você. Unidos somos mais fortes!</p>
+        <!-- Substitua o # pelo link direto de convite do grupo do WhatsApp -->
+        <a href="https://chat.whatsapp.com/SEU_LINK_AQUI" target="_blank" class="btn-whatsapp">
+            Entrar no Grupo do WhatsApp
+        </a>
+    </header>
+
+    <div class="container">
+        
+        <!-- Nossas Bandeiras -->
+        <div class="titulo-secao">
+            <h2>Nossas Bandeiras</h2>
+            <div class="barra"></div>
+        </div>
+
+        <div class="grid-bandeiras">
+            <div class="card-bandeira">
+                <h3><span class="check-icon">✓</span> Valorização Profissional</h3>
+                <p>Luta firme pelo reconhecimento da categoria, defesa da carreira socioeducativa, recomposição salarial e isonomia de direitos.</p>
+            </div>
+
+            <div class="card-bandeira">
+                <h3><span class="check-icon">✓</span> Segurança no Trabalho</h3>
+                <p>Cobrança permanente por condições dignas nas unidades, efetivo adequado, equipamentos de proteção e protocolos seguros de atuação.</p>
+            </div>
+
+            <div class="card-bandeira">
+                <h3><span class="check-icon">✓</span> Saúde Física e Mental</h3>
+                <p>Atenção integral à saúde do servidor, prevenção ao adoecimento ocupacional e suporte efetivo aos trabalhadores do sistema.</p>
+            </div>
+
+            <div class="card-bandeira">
+                <h3><span class="check-icon">✓</span> Assessoria Jurídica Forte</h3>
+                <p>Atuação jurídica ágil, especializada e combativa na defesa individual e coletiva dos direitos estatutários e previdenciários.</p>
+            </div>
+
+            <div class="card-bandeira">
+                <h3><span class="check-icon">✓</span> Transparência Sindical</h3>
+                <p>Prestação de contas clara e acessível à categoria, com decisões democráticas e gestão aberta aos servidores.</p>
+            </div>
+
+            <div class="card-bandeira">
+                <h3><span class="check-icon">✓</span> Sindicato Presente na Base</h3>
+                <p>Diretoria atuante no dia a dia das unidades e setores administrativos, ouvindo cada servidor de perto e construindo soluções juntos.</p>
+            </div>
+        </div>
+
+        <!-- Apresentação Flavio Artur -->
+        <div class="perfil-box">
+            <div class="perfil-foto">
+                <!-- Suba a imagem no GitHub com o nome flavio.jpg -->
+                <img src="flavio.jpg" alt="Flavio Artur - Agente de Segurança Socioeducativo">
+            </div>
+            <div class="perfil-texto">
+                <span class="cargo">Agente de Segurança Socioeducativo • DEGASE-RJ</span>
+                <h2>Flavio Artur</h2>
+                <blockquote>"Diálogo, transparência e competência."</blockquote>
+                <p>Com vivência real na rotina do DEGASE no Rio de Janeiro, <strong>Flavio Artur</strong> integra a <strong>Chapa 2 — Sempre na Luta</strong> com o compromisso de construir um sindicato que realmente represente e defenda cada servidor.</p>
+                <p>Nosso objetivo é unir a categoria, fortalecer a mobilização e garantir voz ativa em todas as pautas decisivas para o futuro dos trabalhadores do sistema socioeducativo.</p>
+            </div>
+        </div>
+
+        <!-- Chamada para o Grupo -->
+        <div class="cta-grupo">
+            <h2>Unidos somos mais fortes! Participe!</h2>
+            <p>Junte-se a nós no grupo oficial do WhatsApp da Chapa 2 e fique por dentro das nossas propostas, agendas nas unidades, lutas e conquistas.</p>
+            
+            <div class="qr-container">
+                <!-- Suba o card do QR Code no GitHub com o nome qrcode.jpg -->
+                <img src="qrcode.jpg" alt="QR Code Grupo WhatsApp Chapa 2">
+            </div>
+
+            <a href="https://chat.whatsapp.com/SEU_LINK_AQUI" target="_blank" class="btn-whatsapp">
+                Clique aqui para entrar no grupo
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>CHAPA 2 — SEMPRE NA LUTA</strong></p>
+        <p>Por um SINDDEGASE forte, transparente e comprometido com você!</p>
+    </footer>
+
+</body>
+</html>
