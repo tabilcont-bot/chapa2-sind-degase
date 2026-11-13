@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapa Sempre na Luta — Plano de Ação & Inteligência Estratégica (SINDDEGASE)</title>
+    <style>
+        :root {
+            --bg-main: #0b1120;
+            --bg-card: #111827;
+            --bg-accent: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --primary: #eab308;
+            --primary-hover: #ca8a04;
+            --primary-soft: rgba(234, 179, 8, 0.14);
+            --secondary: #3b82f6;
+            --secondary-soft: rgba(59, 130, 246, 0.14);
+            --success: #10b981;
+            --success-soft: rgba(16, 185, 129, 0.14);
+            --border: #1e293b;
+            --border-light: #334155;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45), 0 8px 10px -6px rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-badge {
+            background: linear-gradient(135deg, var(--primary), #d97706);
+            color: #0b1120;
+            font-weight: 800;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.08rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.84rem;
+            font-weight: 600;
+            padding: 0.45rem 0.8rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+            background: var(--bg-accent);
+        }
+
+        .nav-cta {
+            background: var(--primary) !important;
+            color: #0b1120 !important;
+            font-weight: 700 !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-hover) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3.75rem 1.5rem 3.25rem;
+            background: radial-gradient(circle at top right, rgba(234, 179, 8, 0.12), transparent 45%),
+                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.1), transparent 45%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .hero-pill {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            border: 1px solid rgba(234, 179, 8, 0.35);
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.9rem, 4vw, 3.1rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            max-width: 920px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.06rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-bottom: 1.85rem;
+        }
+
+        .hero-thesis {
+            background: rgba(17, 24, 39, 0.9);
+            border-left: 4px solid var(--primary);
+            padding: 1.2rem 1.4rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            max-width: 920px;
+            margin-bottom: 2.25rem;
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-thesis strong {
+            color: var(--primary);
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-thesis p {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        /* KPI Strip */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.2rem;
+        }
+
+        .kpi-label {
+            font-size: 0.76rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .kpi-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .kpi-value.gold { color: var(--primary); }
+        .kpi-value.blue { color: var(--secondary); }
+        .kpi-value.green { color: var(--success); }
+
+        .kpi-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* Main Sections */
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        .section-block {
+            margin-bottom: 4.5rem;
+            scroll-margin-top: 85px;
+        }
+
+        .section-header {
+            margin-bottom: 1.6rem;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.45rem, 2.6vw, 2rem);
+            font-weight: 800;
+            margin-bottom: 0.35rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 780px;
+            font-size: 0.96rem;
+        }
+
+        /* TÓPICOS CLICÁVEIS - EIXOS (NATIVO <details>/<summary> GARANTIDO) */
+        .eixos-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .quick-jumps {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .jump-link {
+            display: inline-block;
+            text-decoration: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            padding: 0.42rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .jump-link:hover, .jump-link.active {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .action-btn {
+            background: var(--bg-accent);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            padding: 0.45rem 0.95rem;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .action-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .accordion-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        details.eixo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        details.eixo-card[open] {
+            border-color: rgba(234, 179, 8, 0.5);
+            box-shadow: var(--shadow);
+        }
+
+        summary.eixo-header {
+            list-style: none;
+            padding: 1.3rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        summary.eixo-header::-webkit-details-marker {
+            display: none;
+        }
+
+        summary.eixo-header:hover {
+            background: rgba(30, 41, 59, 0.6);
+        }
+
+        .eixo-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .eixo-num {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--primary-soft);
+            border: 1px solid rgba(234, 179, 8, 0.4);
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .eixo-title-wrap h3 {
+            font-size: 1.12rem;
+            font-weight: 700;
+            margin-bottom: 0.15rem;
+            color: var(--text-primary);
+        }
+
+        .eixo-title-wrap p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .eixo-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .badge-count {
+            background: var(--bg-accent);
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.28rem 0.65rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-light);
+        }
+
+        .chevron-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(234, 179, 8, 0.12);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: transform 0.25s ease;
+        }
+
+        details.eixo-card[open] .chevron-icon {
+            transform: rotate(180deg);
+            background: var(--primary);
+            color: #0b1120;
+        }
+
+        .eixo-body {
+            padding: 0 1.5rem 1.65rem;
+            border-top: 1px solid var(--border);
+            background: rgba(15, 23, 42, 0.5);
+        }
+
+        .eixo-diagnostico {
+            margin: 1.2rem 0;
+            padding: 0.9rem 1.15rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary);
+            border-top: 1px solid var(--border-light);
+            border-right: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.91rem;
+            color: #cbd5e1;
+        }
+
+        .subtopics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.1rem;
+            margin-top: 0.85rem;
+        }
+
+        .subtopic-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.2rem;
+        }
+
+        .subtopic-box h4 {
+            color: var(--primary);
+            font-size: 0.94rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.45rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .proposta-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .proposta-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            font-size: 0.89rem;
+            color: #e2e8f0;
+        }
+
+        .proposta-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* TABELAS INFORMATIVAS */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.89rem;
+        }
+
+        thead {
+            background: #1e293b;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        th {
+            padding: 0.95rem 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 0.95rem 1.1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            color: #e2e8f0;
+        }
+
+        tbody tr:hover {
+            background: rgba(30, 41, 59, 0.45);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tr-total {
+            background: rgba(234, 179, 8, 0.12) !important;
+            font-weight: 700;
+        }
+
+        .tr-total td {
+            color: var(--primary);
+            border-top: 2px solid rgba(234, 179, 8, 0.4);
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.22rem 0.58rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .pill-gold { background: var(--primary-soft); color: var(--primary); border: 1px solid rgba(234, 179, 8, 0.35); }
+        .pill-blue { background: var(--secondary-soft); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.35); }
+        .pill-green { background: var(--success-soft); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); }
+
+        /* INTELIGÊNCIA PROBATÓRIA (ABAS CLICÁVEIS 100% FUNCIONAIS) */
+        .buscas-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .busca-tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            text-align: left;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .busca-tab-btn:hover {
+            border-color: var(--secondary);
+            background: rgba(30, 41, 59, 0.6);
+        }
+
+        .busca-tab-btn.active {
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.85);
+            box-shadow: 0 0 0 1px var(--primary);
+        }
+
+        .busca-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.65rem;
+        }
+
+        .busca-tab-btn h4 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-primary);
+        }
+
+        .busca-tab-btn p {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+        }
+
+        .busca-panel {
+            display: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+
+        .busca-panel.active {
+            display: block;
+        }
+
+        .busca-panel h4 {
+            color: var(--primary);
+            font-size: 1.08rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .busca-panel .meta-org {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .busca-panel ul {
+            margin-left: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            font-size: 0.91rem;
+        }
+
+        .busca-impact {
+            background: rgba(16, 185, 129, 0.09);
+            border: 1px solid rgba(16, 185, 129, 0.28);
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.88rem;
+            color: #a7f3d0;
+        }
+
+        /* Two-column tables */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 980px) {
+            .two-col-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Roadmap */
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.1rem;
+        }
+
+        .phase-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+        }
+
+        .phase-days {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.76rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            margin-bottom: 0.7rem;
+        }
+
+        .phase-card h4 {
+            font-size: 1.03rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .phase-card p {
+            font-size: 0.87rem;
+            color: var(--text-secondary);
+        }
+
+        /* Composição da Chapa (<details> nativo) */
+        details.chapa-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        summary.chapa-summary {
+            list-style: none;
+            padding: 1.4rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            gap: 1rem;
+        }
+
+        summary.chapa-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .chapa-grid {
+            padding: 0 1.5rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 0.85rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.25rem;
+        }
+
+        .member-item {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .member-role {
+            font-size: 0.74rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .member-name {
+            font-size: 0.91rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* FORMULÁRIO DE SUGESTÕES E COMENTÁRIOS */
+        .feedback-container {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 900px) {
+            .feedback-container {
+                grid-template-columns: 1fr;
+                padding: 1.4rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.05rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        label {
+            display: block;
+            font-size: 0.83rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-bottom: 0.35rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 0.72rem 0.9rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.91rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea {
+            min-height: 115px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: #0b1120;
+            font-weight: 800;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1.5rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .suggestions-feed {
+            background: #0f172a;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            max-height: 520px;
+        }
+
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.85rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .feed-header h4 {
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .feed-list {
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            padding-right: 0.25rem;
+        }
+
+        .feed-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.9rem;
+        }
+
+        .feed-item-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .feed-author {
+            font-weight: 700;
+            font-size: 0.83rem;
+            color: var(--text-primary);
+        }
+
+        .feed-tag {
+            font-size: 0.72rem;
+            background: var(--secondary-soft);
+            color: #60a5fa;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .feed-text {
+            font-size: 0.86rem;
+            color: #cbd5e1;
+        }
+
+        .feed-date {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+            display: block;
+        }
+
+        .toast {
+            display: none;
+            margin-top: 0.85rem;
+            padding: 0.75rem 1rem;
+            background: var(--success-soft);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #6ee7b7;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.86rem;
+            background: #080d19;
+        }
+
+        footer strong {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <a href="#topo" class="logo">
+            <span class="logo-badge">SINDDEGASE</span>
+            <span class="logo-text">CHAPA <span>SEMPRE NA LUTA</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="#eixos">Eixos do Plano</a>
+            <a href="#matriz-pautas">Blindagem & Pautas</a>
+            <a href="#buscas">Inteligência Probatória</a>
+            <a href="#igcp-piso">IGCP & Piso R$ 9.600</a>
+            <a href="#roteiro">Roteiro Tático</a>
+            <a href="#chapa">Composição</a>
+            <a href="#sugestoes" class="nav-cta">Enviar Sugestão</a>
+        </nav>
+    </div>
+</header>
+
+<section id="topo" class="hero">
+    <div class="hero-inner">
+        <div class="hero-pill">Eleições Sindicais • Sistema Socioeducativo do Estado do Rio de Janeiro</div>
+        <h1>Por uma categoria <span>unida, valorizada</span> e com engenharia técnica de luta.</h1>
+        <p class="hero-subtitle">
+            Plano de Ação da <strong>Chapa Sempre na Luta</strong> integrado ao Dossiê Estratégico de Advocacia Legislativa, Blindagem na Lei de Responsabilidade Fiscal (LRF) e Sustentação Atuarial para superar 12 anos de estagnação.
+        </p>
+
+        <div class="hero-thesis">
+            <strong>Tese Central de Gestão Sindical</strong>
+            <p>
+                Nenhuma reivindicação será apresentada como aumento isolado de despesa. Cada pauta será protocolada com prova empírica, rubrica orçamentária definida e demonstração de queda de custos indiretos — dividindo o pleito em um <strong>Pacote Indenizatório e Profilático de Aprovação Imediata</strong> (fora do limite de pessoal da LRF) e um <strong>Pacote Remuneratório Estrutural</strong> ancorado na LDO, LOA e PPA.
+            </p>
+        </div>
+
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-label">Piso Inicial Proposto</div>
+                <div class="kpi-value gold">R$ 9.600,00</div>
+                <div class="kpi-sub">Nível Superior + Complexidade + Amortização</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Índice IGCP Comprovado</div>
+                <div class="kpi-value blue">96,0 / 100</div>
+                <div class="kpi-sub">Complexidade e Penosidade Extrema</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Jornada & Férias</div>
+                <div class="kpi-value green">30h / 60 dias</div>
+                <div class="kpi-sub">Escala 24x96 e Férias Semestrais (30+30)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Verbas Indenizatórias</div>
+                <div class="kpi-value">Impacto 0% LRF</div>
+                <div class="kpi-sub">Auxílio-Fardamento + Cartão Natal (R$ 1.000+IPCA)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <!-- SEÇÃO 1: TÓPICOS CLICÁVEIS COM <details> E <summary> NATIVOS -->
+    <section id="eixos" class="section-block">
+        <div class="section-header">
+            <span class="section-tag">Programa de Compromissos</span>
+            <h2>Eixos Estratégicos do Plano de Ação</h2>
+            <p>Clique diretamente no título de qualquer eixo abaixo ou use os atalhos para abrir as propostas detalhadas.</p>
+        </div>
+
+        <div class="eixos-toolbar">
+            <div class="quick-jumps">
+                <a href="#eixo-1" class="jump-link" data-target="eixo-1">Eixo 1: Salário & Carreira</a>
+                <a href="#eixo-2" class="jump-link" data-target="eixo-2">Eixo 2: Saúde & Segurança</a>
+                <a href="#eixo-3" class="jump-link" data-target="eixo-3">Eixo 3: Unidades</a>
+                <a href="#eixo-4" class="jump-link" data-target="eixo-4">Eixo 4: Anti-Terceirização</a>
+                <a href="#eixo-5" class="jump-link" data-target="eixo-5">Eixo 5: Fim Indicações Políticas</a>
+                <a href="#eixo-6" class="jump-link" data-target="eixo-6">Nosso Sindicato</a>
+            </div>
+            <button type="button" class="action-btn" id="btnToggleAll">Expandir Todos os Eixos</button>
+        </div>
+
+        <div class="accordion-stack">
+
+            <!-- EIXO 1 -->
+            <details class="eixo-card" id="eixo-1" open>
+                <summary class="eixo-header">
+                    <div class="eixo-title-wrap">
+                        <div class="eixo-num">01</div>
+                        <div>
+                            <h3>Valorização Salarial e Plano de Carreira</h3>
+                            <p>Recomposição de perdas, Nível Superior, PCS modernizado, insalubridade e benefícios.</p>
+                        </div>
+                    </div>
+                    <div class="eixo-meta">
+                        <span class="badge-count">11 Propostas</span>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="eixo-body">
+                    <div class="eixo-diagnostico">
+                        <strong>Diagnóstico:</strong> Salários defasados há anos, ausência de aumento real e plano de cargos incompatível com a complexidade e o risco do sistema socioeducativo. Prioridade máxima de reversão com lastro atuarial.
+                    </div>
+                    <div class="subtopics-grid">
+                        <div class="subtopic-box">
+                            <h4>Remuneração e Isonomia</h4>
+                            <ul class="proposta-list">
+                                <li>Campanha permanente pela recomposição das perdas salariais e combate à defasagem acumulada.</li>
+                                <li>Pressão pelo pagamento dos valores atrasados relativos ao Nível Superior dos Agentes de Segurança Socioeducativa (Lei aprovada em 2022).</li>
+                                <li>Implementação da aposentadoria especial para as demais carreiras socioeducativas.</li>
+                                <li>Implementação administrativa do adicional de insalubridade/periculosidade.</li>
+                                <li>Transformação dos cargos de nível fundamental em nível médio no quadro permanente.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Carreira e Progressão</h4>
+                            <ul class="proposta-list">
+                                <li>Revisão e modernização integral do Plano de Cargos e Salários (PCS) da categoria.</li>
+                                <li>Criação de Mesa Permanente de Negociação com DEGASE (Governo do Estado) e ALERJ para política salarial.</li>
+                                <li>Valorização das chefias e gratificações com exclusividade de nomeação para servidores estatutários da carreira socioeducativa fluminense.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Benefícios</h4>
+                            <ul class="proposta-list">
+                                <li>Defesa e majoração do auxílio-alimentação e auxílio-transporte para todos os servidores.</li>
+                                <li>Plano de saúde de qualidade custeado pelo Estado para o servidor e seus dependentes.</li>
+                                <li>Pagamento do Adicional de Qualificação para todos os servidores ativos e inativos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- EIXO 2 -->
+            <details class="eixo-card" id="eixo-2">
+                <summary class="eixo-header">
+                    <div class="eixo-title-wrap">
+                        <div class="eixo-num">02</div>
+                        <div>
+                            <h3>Saúde, Segurança no Trabalho e Moradia</h3>
+                            <p>Combate ao burnout, EPIs completos, efetivo mínimo legal, proteção pericial e habitação.</p>
+                        </div>
+                    </div>
+                    <div class="eixo-meta">
+                        <span class="badge-count">13 Propostas</span>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="eixo-body">
+                    <div class="eixo-diagnostico">
+                        <strong>Diagnóstico:</strong> Exposição diária a riscos físicos e emocionais severos (estresse crônico, esgotamento, burnout e violência intramuros) que não podem ser naturalizados.
+                    </div>
+                    <div class="subtopics-grid">
+                        <div class="subtopic-box">
+                            <h4>Saúde Mental e Física</h4>
+                            <ul class="proposta-list">
+                                <li>Manutenção e ampliação do programa de acompanhamento psicológico e psiquiátrico gratuito fora das unidades.</li>
+                                <li>Mapeamento e monitoramento epidemiológico dos casos de adoecimento ocupacional em todas as unidades.</li>
+                                <li>Combate à cultura do silêncio: fim de qualquer pressão para não registrar afastamentos ou acidentes.</li>
+                                <li>Defesa irrestrita do afastamento por doença sem prejuízo em progressões e benefícios.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Segurança nas Unidades</h4>
+                            <ul class="proposta-list">
+                                <li>Dotação de EPIs adequados para todos: Espargidores Químicos, Tonfas e Coletes Balísticos (saídas externas).</li>
+                                <li>Aprimoramento dos protocolos de crise com treinamento periódico obrigatório e escuta ativa da base e sindicato.</li>
+                                <li>Exigência de efetivo mínimo por plantão como garantia legal durante as 24 horas.</li>
+                                <li>Denúncia pública e jurídica contra qualquer omissão que coloque em risco a integridade dos servidores.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Acidente de Trabalho, Perícia e Moradia</h4>
+                            <ul class="proposta-list">
+                                <li>Assessoria jurídica sindical imediata para vítimas de acidente de trabalho ou violência em serviço.</li>
+                                <li>Monitoramento de processos periciais para evitar perdas financeiras durante afastamentos.</li>
+                                <li>Registro e publicização transparente de dados sobre acidentes e adoecimento.</li>
+                                <li>Implantação de Programas Habitacionais para servidores em áreas próximas ao local de trabalho.</li>
+                                <li>Lotação prioritária para servidores acima de 60 anos e/ou com mais de 20 anos de serviço público.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- EIXO 3 -->
+            <details class="eixo-card" id="eixo-3">
+                <summary class="eixo-header">
+                    <div class="eixo-title-wrap">
+                        <div class="eixo-num">03</div>
+                        <div>
+                            <h3>Condições das Unidades, Insumos e Tecnologia</h3>
+                            <p>Reformas preventivas, auxílio uniforme semestral, fiscalização de compras e teletrabalho.</p>
+                        </div>
+                    </div>
+                    <div class="eixo-meta">
+                        <span class="badge-count">12 Propostas</span>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="eixo-body">
+                    <div class="eixo-diagnostico">
+                        <strong>Diagnóstico:</strong> Precariedade estrutural, falhas de manutenção e burocracia manual comprometem diretamente a segurança operacional, a saúde e a dignidade dos servidores.
+                    </div>
+                    <div class="subtopics-grid">
+                        <div class="subtopic-box">
+                            <h4>Infraestrutura Física</h4>
+                            <ul class="proposta-list">
+                                <li>Diagnóstico participativo das condições de cada unidade, com relatório publicado e enviado aos órgãos de controle.</li>
+                                <li>Pressão por reformas e manutenção preventiva contínua — não apenas em emergências.</li>
+                                <li>Garantia de vestiários, refeitórios, locais de descanso e banheiros dignos para os servidores.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Materiais e Insumos</h4>
+                            <ul class="proposta-list">
+                                <li>Pagamento semestral do auxílio uniforme a todos os servidores.</li>
+                                <li>Fiscalização sindical dos processos licitatórios de fornecimento de materiais.</li>
+                                <li>Canal direto para denúncias de falta de insumos com prazo institucional obrigatório de resposta.</li>
+                                <li>Garantia de aquisição de materiais de qualidade e medidas jurídicas contra superfaturamento ou fraudes.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Tecnologia e Teletrabalho</h4>
+                            <ul class="proposta-list">
+                                <li>Modernização dos sistemas de registro e comunicação nas unidades, reduzindo burocracia manual.</li>
+                                <li>Implementação do Livro de Ocorrências por meio eletrônico.</li>
+                                <li>Pagamento do auxílio tecnológico a todos os servidores.</li>
+                                <li>Regulamentação e implantação do teletrabalho (home office) voluntário para funções compatíveis com execução remota, mediante autorização da chefia e interesse público.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- EIXO 4 -->
+            <details class="eixo-card" id="eixo-4">
+                <summary class="eixo-header">
+                    <div class="eixo-title-wrap">
+                        <div class="eixo-num">04</div>
+                        <div>
+                            <h3>Combate à Precarização e Terceirização</h3>
+                            <p>Concurso público sem exceções e rejeição total a OSCs, temporários ou gestão privada.</p>
+                        </div>
+                    </div>
+                    <div class="eixo-meta">
+                        <span class="badge-count">6 Propostas</span>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="eixo-body">
+                    <div class="eixo-diagnostico">
+                        <strong>Diagnóstico:</strong> A substituição de servidores concursados por contratos precários fragiliza o atendimento socioeducativo, retira direitos e ameaça a natureza pública da atividade-fim.
+                    </div>
+                    <div class="subtopics-grid">
+                        <div class="subtopic-box">
+                            <h4>Concursos Públicos e Vagas</h4>
+                            <ul class="proposta-list">
+                                <li>Campanha permanente pela realização de concurso público para reposição integral do quadro, sem exceções.</li>
+                                <li>Oposição firme a contratos temporários, terceirizados ou via OSCs para funções de servidores concursados.</li>
+                                <li>Monitoramento e denúncia pública de qualquer tentativa de substituição do servidor concursado.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Terceirização e Privatização</h4>
+                            <ul class="proposta-list">
+                                <li>Rejeição absoluta a modelos de gestão privada ou semiprivada de unidades socioeducativas.</li>
+                                <li>Denúncia judicial e institucional de contratos que repassem funções-fim do Estado a empresas privadas.</li>
+                                <li>Fiscalização permanente dos contratos de terceirização atualmente vigentes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- EIXO 5 -->
+            <details class="eixo-card" id="eixo-5">
+                <summary class="eixo-header">
+                    <div class="eixo-title-wrap">
+                        <div class="eixo-num">05</div>
+                        <div>
+                            <h3>Fim das Nomeações Políticas</h3>
+                            <p>Edital técnico para diretores, avaliação pelos servidores e blindagem contra assédio.</p>
+                        </div>
+                    </div>
+                    <div class="eixo-meta">
+                        <span class="badge-count">8 Propostas</span>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="eixo-body">
+                    <div class="eixo-diagnostico">
+                        <strong>Diagnóstico:</strong> Diretores e coordenadores nomeados por critérios político-partidários comprometem a segurança operacional, a qualidade técnica e o respeito aos servidores.
+                    </div>
+                    <div class="subtopics-grid">
+                        <div class="subtopic-box">
+                            <h4>Critérios Técnicos para a Gestão</h4>
+                            <ul class="proposta-list">
+                                <li>Defesa de edital público e processo seletivo técnico para nomeação de diretores e gestores de unidades.</li>
+                                <li>Participação do sindicato na definição dos critérios técnicos mínimos para cargos de gestão.</li>
+                                <li>Exigência de formação específica e experiência comprovada na área socioeducativa ou de segurança pública.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Transparência e Proteção Contra Perseguição</h4>
+                            <ul class="proposta-list">
+                                <li>Publicização de todos os atos de nomeação, exoneração e substituição de gestores nas unidades.</li>
+                                <li>Criação de mecanismo público de avaliação dos gestores pelos próprios servidores.</li>
+                                <li>Articulação com Ministério Público, TCE-RJ e ALERJ para fiscalizar nomeações irregulares.</li>
+                                <li>Defesa jurídica imediata contra perseguição política ou retaliação, com canal anônimo e seguro para denúncias de assédio moral e abuso de autoridade.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- EIXO 6 / GESTÃO SINDICAL -->
+            <details class="eixo-card" id="eixo-6">
+                <summary class="eixo-header">
+                    <div class="eixo-title-wrap">
+                        <div class="eixo-num">06</div>
+                        <div>
+                            <h3>Nosso Sindicato: Transparência e Democracia</h3>
+                            <p>Prestação de contas mensal, assembleias híbridas, delegados de base e jurídico atuante.</p>
+                        </div>
+                    </div>
+                    <div class="eixo-meta">
+                        <span class="badge-count">6 Compromissos</span>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="eixo-body">
+                    <div class="subtopics-grid">
+                        <div class="subtopic-box">
+                            <h4>Governança e Participação</h4>
+                            <ul class="proposta-list">
+                                <li>Prestação de contas mensal publicada nos canais oficiais com acesso livre a todos os filiados.</li>
+                                <li>Assembleias periódicas com pauta aberta e participação presencial e virtual.</li>
+                                <li>Representação de base em todas as unidades do sistema — nenhum servidor sem representante próximo.</li>
+                            </ul>
+                        </div>
+                        <div class="subtopic-box">
+                            <h4>Comunicação, Jurídico e Articulação</h4>
+                            <ul class="proposta-list">
+                                <li>Comunicação direta, clara e frequente via grupos de WhatsApp, e-mail e redes sociais.</li>
+                                <li>Departamento jurídico atuante com atendimento prioritário a processos disciplinares, acidentes de trabalho e assédio.</li>
+                                <li>Articulação com outros sindicatos e centrais sindicais para fortalecer a luta estadual e federal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: TABELA INFORMATIVA 1 - MATRIZ DE BLINDAGEM JURÍDICA E ORÇAMENTÁRIA -->
+    <section id="matriz-pautas" class="section-block">
+        <div class="section-header">
+            <span class="section-tag">Engenharia Orçamentária & LRF</span>
+            <h2>Matriz de Amarração: Exigências, Enquadramento Legal e Provas</h2>
+            <p>Como cada reivindicação estratégica é blindada contra vetos da Lei de Responsabilidade Fiscal (LC nº 101/2000) e sustentada perante Fazenda, Casa Civil e TCE.</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exigência da Pauta</th>
+                        <th>Desenho Técnico e Operacional</th>
+                        <th>Blindagem Legal e Constitucional</th>
+                        <th>Busca Probatória</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Nível Superior e Salário Inicial de R$ 9.600,00</strong></td>
+                        <td>Ingresso por graduação superior. Subsídio inicial composto por Qualificação (50%), Complexidade IGCP 96/100 (30%) e Amortização de Abalos (20%).</td>
+                        <td>Art. 39, § 1º, I a III da CF/88 (remuneração conforme complexidade e risco) c/c Lei nº 12.594/2012 (SINASE).</td>
+                        <td><span class="pill pill-blue">Buscas 1, 3 e 4</span><br><small>Perfil infracional, IGCP 96/100 e leis estaduais.</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Auxílio-Fardamento Anual</strong></td>
+                        <td>Parcela única anual estritamente indenizatória para reposição de enxoval tático obrigatório e proteção individual.</td>
+                        <td>Art. 19, § 1º da LRF (<strong>fora do limite de pessoal</strong>; rubrica de custeio) e vedação ao enriquecimento sem causa do Estado.</td>
+                        <td><span class="pill pill-gold">Buscas 2 e 3</span><br><small>Rubrica 3.3.90.93 e desgaste em contenções.</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Cartão de Natal (Mín. R$ 1.000,00 + IPCA)</strong></td>
+                        <td>Abono Alimentar Extraordinário de Fim de Ano (indenizatório), corrigido anualmente via ato administrativo pelo IPCA acumulado.</td>
+                        <td>Contorna a Súmula Vinculante 42 do STF por ser verba indenizatória de custeio alimentar (Art. 19, § 1º da LRF).</td>
+                        <td><span class="pill pill-gold">Buscas 2 e 4</span><br><small>Superávit na rubrica 3.3.90.46 e precedentes IPCA.</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. 14º Salário (Convertido em BADS)</strong></td>
+                        <td>Bônus Anual de Desempenho Socioeducativo (100% da remuneração bruta em dez/jan) atrelado a metas objetivas.</td>
+                        <td>Art. 39, § 7º da CF/88 (prêmio de produtividade custeado por economia com despesas correntes e gestão eficiente).</td>
+                        <td><span class="pill pill-green">Buscas 1, 2 e 4</span><br><small>Economia com queda de absenteísmo/horas extras.</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Jornada de 30h Semanais e Escala 24x96</strong></td>
+                        <td>Ciclo de 120h (6 plantões mensais = 144h brutas). Deduzidos intrajornada e hora noturna ficta = <strong>30h líquidas semanais</strong>.</td>
+                        <td>Art. 7º, XIII e XXII da CF/88 e Convenção nº 155 da OIT (redução de riscos psicofisiológicos ocupacionais).</td>
+                        <td><span class="pill pill-blue">Busca 1</span><br><small>Custo de horas extras e licenças na 24x72 vs. 24x96.</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. 60 Dias de Férias Anuais (30 + 30)</strong></td>
+                        <td>Férias profiláticas obrigatoriamente fracionadas em dois períodos semestrais de 30 dias, vedada venda integral.</td>
+                        <td>Analogia à Lei Federal nº 1.234/1950 (férias semestrais por exposição cumulativa a agente agressivo) e CID-11 (Burnout).</td>
+                        <td><span class="pill pill-blue">Buscas 1 e 3</span><br><small>Prevalência de licenças CID F após 6 meses.</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: INTELIGÊNCIA PROBATÓRIA (ABAS PRÉ-RENDERIZADAS CLICÁVEIS) -->
+    <section id="buscas" class="section-block">
+        <div class="section-header">
+            <span class="section-tag">Levantamento Empírico & LAI</span>
+            <h2>As Quatro Buscas de Inteligência Probatória</h2>
+            <p>Clique em qualquer diligência abaixo para alternar o painel de detalhamento técnico e órgãos destinatários.</p>
+        </div>
+
+        <div class="buscas-tabs">
+            <button type="button" class="busca-tab-btn active" data-busca="panel-busca-1">
+                <div>
+                    <div class="busca-top">
+                        <span class="pill pill-blue">Diligência 01</span>
+                        <small style="color:var(--text-muted)">Via LAI • 5 a 12 anos</small>
+                    </div>
+                    <h4>Dossiê Epidemiológico, Atuarial e Custo Indireto</h4>
+                    <p>Mapa de afastamentos CID F, M e I, readaptações e auditoria de gastos com horas extras.</p>
+                </div>
+                <small style="color:var(--primary); margin-top:0.75rem; font-weight:700;">Clique para abrir Busca 1 →</small>
+            </button>
+
+            <button type="button" class="busca-tab-btn" data-busca="panel-busca-2">
+                <div>
+                    <div class="busca-top">
+                        <span class="pill pill-gold">Diligência 02</span>
+                        <small style="color:var(--text-muted)">SICONFI / RGF / LOA</small>
+                    </div>
+                    <h4>Auditoria Orçamentária, Fiscal e Rubricas</h4>
+                    <p>Margem real da RCL na LRF e saldos disponíveis nas rubricas indenizatórias 3.3.90.93 e 3.3.90.46.</p>
+                </div>
+                <small style="color:var(--primary); margin-top:0.75rem; font-weight:700;">Clique para abrir Busca 2 →</small>
+            </button>
+
+            <button type="button" class="busca-tab-btn" data-busca="panel-busca-3">
+                <div>
+                    <div class="busca-top">
+                        <span class="pill pill-green">Diligência 03</span>
+                        <small style="color:var(--text-muted)">SINASE / CNJ / MP</small>
+                    </div>
+                    <h4>Mapeamento Operacional e Criminológico</h4>
+                    <p>Sinistralidade intramuros, presença de facções, ameaças extramuros e déficit agente/interno.</p>
+                </div>
+                <small style="color:var(--primary); margin-top:0.75rem; font-weight:700;">Clique para abrir Busca 3 →</small>
+            </button>
+
+            <button type="button" class="busca-tab-btn" data-busca="panel-busca-4">
+                <div>
+                    <div class="busca-top">
+                        <span class="pill pill-blue">Diligência 04</span>
+                        <small style="color:var(--text-muted)">ALs / TCEs Estaduais</small>
+                    </div>
+                    <h4>Direito Comparado e Jurisprudência de Contas</h4>
+                    <p>Leis estaduais sancionadas (DF, MG, RS, PE, SC, CE) com Nível Superior, fardamento e bônus.</p>
+                </div>
+                <small style="color:var(--primary); margin-top:0.75rem; font-weight:700;">Clique para abrir Busca 4 →</small>
+            </button>
+        </div>
+
+        <!-- Painel Busca 1 -->
+        <div class="busca-panel active" id="panel-busca-1">
+            <h4>Busca 1: Dossiê Epidemiológico, Atuarial e de Custo Indireto da Folha (Via LAI - Lei nº 12.527/2011)</h4>
+            <span class="meta-org">Destinatários: Secretaria de Estado de Administração/Gestão de Pessoas, Junta Médica Oficial, RPPS e Diretoria Geral do Sistema Socioeducativo (série de 5 a 12 anos).</span>
+            <ul>
+                <li><strong>Mapa de Morbidade Ocupacional por CID:</strong> Licenças médicas e dias afastados nos capítulos CID F (depressão, ansiedade, TEPT, Burnout), CID M (lesões osteomusculares em contenções) e CID I (hipertensão/cardiovasculares).</li>
+                <li><strong>Passivo Previdenciário e Funcional:</strong> Total de agentes em readaptação funcional, aposentadorias por incapacidade permanente e óbitos decorrentes de causas psiquiátricas/cardíacas.</li>
+                <li><strong>Auditoria do Custo de Substituição:</strong> Montante gasto nos últimos 5 exercícios com horas extras, plantões extraordinários e diárias operacionais para cobrir déficits gerados por licenças médicas.</li>
+            </ul>
+            <div class="busca-impact">
+                <strong>Aplicação Estratégica:</strong> Comprova matematicamente à Fazenda que a Jornada de 30h (Escala 24x96) e as Férias Profiláticas (30+30 dias) estancam gastos com horas extras e afastamentos, fundamentando a Parcela de Amortização Biopsicossocial (R$ 1.920,00) e o custeio do BADS (Art. 39, § 7º da CF/88).
+            </div>
+        </div>
+
+        <!-- Painel Busca 2 -->
+        <div class="busca-panel" id="panel-busca-2">
+            <h4>Busca 2: Auditoria Orçamentária, Fiscal e de Rubricas de Custeio (SICONFI, RGF, LDO/LOA e TCE)</h4>
+            <span class="meta-org">Fontes: Relatório de Gestão Fiscal (RGF/SICONFI), Portal da Transparência Estadual, LDO e LOA vigentes.</span>
+            <ul>
+                <li><strong>Margem de Despesa com Pessoal na LRF:</strong> Percentual exato de comprometimento da Receita Corrente Líquida (RCL) frente aos limites de Alerta (44,10%), Prudencial (46,55%) e Máximo (49,00%), identificando a folga nominal em reais.</li>
+                <li><strong>Disponibilidade em Rubricas Indenizatórias:</strong> Saldo e histórico de suplementação nos elementos 3.3.90.93 (Indenizações e Restituições) e 3.3.90.46 (Auxílio-Alimentação), classificados em "Outras Despesas Correntes" (fora do limite de pessoal — Art. 19, § 1º da LRF).</li>
+                <li><strong>Excesso de Arrecadação e Janelas LDO/LOA:</strong> Superávit tributário corrente e calendário da Comissão de Orçamento da ALERJ para inserção de emendas autorizativas.</li>
+            </ul>
+            <div class="busca-impact">
+                <strong>Aplicação Estratégica:</strong> Desarma a desculpa de "falta de margem na LRF". Comprova que o Auxílio-Fardamento Anual e o Cartão de Natal de R$ 1.000,00 + IPCA têm impacto zero no índice de pessoal e podem ser aprovados imediatamente.
+            </div>
+        </div>
+
+        <!-- Painel Busca 3 -->
+        <div class="busca-panel" id="panel-busca-3">
+            <h4>Busca 3: Mapeamento Operacional, Criminológico e Neurobiológico (SINASE, CNJ, MP e Inteligência)</h4>
+            <span class="meta-org">Destinatários: Diretoria de Segurança Socioeducativa, relatórios de inspeção do CNJ, Promotorias da Infância e Juventude (MP) e Secretaria de Segurança Pública.</span>
+            <ul>
+                <li><strong>Estatística de Sinistralidade Intramuros (5 anos):</strong> Motins, princípios de rebelião, tentativas de homicídio, tomada de reféns, agressões contra agentes desarmados e apreensões de estoques.</li>
+                <li><strong>Perfil Criminológico e Faccional:</strong> Percentual de internos por atos análogos a crimes hediondos, presença de facções criminosas nas unidades e Boletins de Ocorrência de ameaças extramuros contra agentes e familiares.</li>
+                <li><strong>Relação Biopsicossocial e Proporção Operacional:</strong> Faixa etária de 12 a 21 anos (pico de força muscular e imaturidade do córtex pré-frontal) confrontada com o déficit numérico Agente por Adolescente.</li>
+            </ul>
+            <div class="busca-impact">
+                <strong>Aplicação Estratégica:</strong> Fornece a prova material para sustentar a nota 96,0/100 no IGCP, tornando obrigatória a transição para o Nível Superior e justificando o Adicional Incorporado de Complexidade (R$ 2.880,00).
+            </div>
+        </div>
+
+        <!-- Painel Busca 4 -->
+        <div class="busca-panel" id="panel-busca-4">
+            <h4>Busca 4: Levantamento de Direito Comparado e Jurisprudência de Contas (Legislações Estaduais)</h4>
+            <span class="meta-org">Fontes: Portais das Assembleias Legislativas, Diários Oficiais e Acórdãos de Tribunais de Contas (DF, MG, RS, PE, SC e CE).</span>
+            <ul>
+                <li><strong>Leis Estaduais de Nível Superior Socioeducativo:</strong> Textos sancionados que reestruturaram o cargo para exigência de graduação superior com simetria remuneratória frente à segurança pública.</li>
+                <li><strong>Normas de Auxílio-Fardamento e Abonos Indenizatórios:</strong> Leis e decretos que instituíram pagamento anual indenizatório para fardamento e abono natalino alimentar corrigido pelo IPCA.</li>
+                <li><strong>Precedentes de Bônus Anual por Resultados:</strong> Legislações que criaram gratificações anuais de produtividade (equivalentes ao 14º salário) validadas pelos TCEs com base no Art. 39, § 7º da CF/88.</li>
+            </ul>
+            <div class="busca-impact">
+                <strong>Aplicação Estratégica:</strong> Neutraliza pareceres protelatórios da Procuradoria-Geral do Estado (PGE), provando que a arquitetura jurídica proposta já foi sancionada e aprovada pelo controle externo em outros Estados.
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: TABELAS INFORMATIVAS 2 E 3 - MATRIZ IGCP (96/100) E COMPOSIÇÃO DO PISO R$ 9.600 -->
+    <section id="igcp-piso" class="section-block">
+        <div class="section-header">
+            <span class="section-tag">Consolidação Técnica & Atuarial</span>
+            <h2>Índice Global de Complexidade (IGCP) & Composição do Piso Salarial</h2>
+            <p>Conversão objetiva da realidade operacional das unidades em pontuação técnica (96,0/100) para fundamentar o vencimento básico inicial de R$ 9.600,00.</p>
+        </div>
+
+        <div class="two-col-grid">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensão Avaliada</th>
+                            <th>Base Fática Comprovada</th>
+                            <th>Peso</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Risco à Integridade Física e Vida</strong><br><small style="color:var(--text-muted)">Busca 3</small></td>
+                            <td>Custódia desarmada intramuros, contenção corpo a corpo, armas artesanais (estoques) e risco de refém.</td>
+                            <td>20</td>
+                            <td><strong>19,5</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Desgaste Psicológico e Neuroendócrino</strong><br><small style="color:var(--text-muted)">Busca 1</small></td>
+                            <td>Hipervigilância em plantões 24h, picos de cortisol, TEPT, Burnout e ameaças de facções.</td>
+                            <td>20</td>
+                            <td><strong>20,0</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Complexidade Biopsicossocial do Interno</strong><br><small style="color:var(--text-muted)">Busca 3</small></td>
+                            <td>Jovens de 12 a 21 anos no ápice da força física combinada à imaturidade do córtex pré-frontal.</td>
+                            <td>15</td>
+                            <td><strong>15,0</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Tríade Funcional (Custódia, Apoio e PIA)</strong><br><small style="color:var(--text-muted)">Buscas 3 e 4</small></td>
+                            <td>Simultaneidade entre contenção de segurança, suporte multidisciplinar e referência normativa 24h.</td>
+                            <td>15</td>
+                            <td><strong>14,5</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Exigência Cognitiva e Jurídica (Nível Sup.)</strong><br><small style="color:var(--text-muted)">Busca 4</small></td>
+                            <td>Domínio de Direito Constitucional/Infracional, Direitos Humanos, Criminologia e relatórios judiciais.</td>
+                            <td>10</td>
+                            <td><strong>9,5</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6. Impacto Social e Risco Extramuros</strong><br><small style="color:var(--text-muted)">Busca 3</small></td>
+                            <td>Restrição de circulação social, reconhecimento por egressos faccionados e necessidade de moradia segura.</td>
+                            <td>10</td>
+                            <td><strong>9,0</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>7. Insalubridade e Confinamento Ambiental</strong><br><small style="color:var(--text-muted)">Busca 1</small></td>
+                            <td>Confinamento acústico e visual, risco biológico infectocontagioso e lesões osteomusculares (CID M).</td>
+                            <td>10</td>
+                            <td><strong>8,5</strong></td>
+                        </tr>
+                        <tr class="tr-total">
+                            <td colspan="2">ÍNDICE GLOBAL DE COMPLEXIDADE E PENOSIDADE OCUPACIONAL (IGCP)</td>
+                            <td>100</td>
+                            <td>96,0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Componente Remuneratório</th>
+                            <th>Peso</th>
+                            <th>Valor Base</th>
+                            <th>Fundamentação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Parcela de Qualificação Técnica</strong><br><small style="color:var(--text-secondary)">Nível Superior</small></td>
+                            <td>50%</td>
+                            <td><strong>R$ 4.800,00</strong></td>
+                            <td>Exigência cognitiva interdisciplinar (Direito, Psicologia, Criminologia) e responsabilidade jurídica no PIA (Busca 4).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Adicional Incorporado de Complexidade</strong><br><small style="color:var(--text-secondary)">IGCP 96/100</small></td>
+                            <td>30%</td>
+                            <td><strong>R$ 2.880,00</strong></td>
+                            <td>Tríade funcional desarmada perante custodiados faccionados em pico de vigor físico (Busca 3).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Parcela de Amortização Biopsicossocial</strong><br><small style="color:var(--text-secondary)">Risco Extramuros</small></td>
+                            <td>20%</td>
+                            <td><strong>R$ 1.920,00</strong></td>
+                            <td>Amortização de custos com moradia/transporte seguro fora de áreas de facção e saúde mental (Busca 1).</td>
+                        </tr>
+                        <tr class="tr-total">
+                            <td>VENCIMENTO BÁSICO / SUBSÍDIO INICIAL</td>
+                            <td>100%</td>
+                            <td>R$ 9.600,00</td>
+                            <td>+ Auxílio-Alimentação, Auxílio-Fardamento e Cartão Natal (R$ 1.000 + IPCA) indenizatórios (Busca 2).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: ROTEIRO TÁTICO DE EXECUÇÃO -->
+    <section id="roteiro" class="section-block">
+        <div class="section-header">
+            <span class="section-tag">Cronograma de Implantação</span>
+            <h2>Roteiro Tático de Execução Sindical</h2>
+            <p>Passo a passo operacional desde o protocolo das diligências via LAI até o fechamento da negociação na Casa Civil.</p>
+        </div>
+
+        <div class="roadmap-grid">
+            <div class="phase-card">
+                <span class="phase-days">Fase 1 • Dias 1 a 15</span>
+                <h4>Protocolo Simultâneo das Diligências</h4>
+                <p>Protocolar Busca 1 (LAI) na SEPLAG/Saúde e Busca 3 na Diretoria do Sistema Socioeducativo (prazo legal de 20+10 dias). Em paralelo, equipes executam Busca 2 (SICONFI/LOA) e Busca 4 (Direito Comparado).</p>
+            </div>
+            <div class="phase-card">
+                <span class="phase-days">Fase 2 • Dias 16 a 35</span>
+                <h4>Estudo de Impacto e Anteprojeto</h4>
+                <p>Consolidar os números em Nota Técnica Atuarial anexada à minuta do Anteprojeto de Lei do Executivo, comprovando a neutralidade fiscal da escala 24x96 (30h líquidas) e das férias de 60 dias.</p>
+            </div>
+            <div class="phase-card">
+                <span class="phase-days">Fase 3 • Janela LDO/LOA</span>
+                <h4>Trava Orçamentária Parlamentar</h4>
+                <p>Articular com a Frente Parlamentar na ALERJ emendas na LDO e LOA prevendo autorização para reestruturação da carreira, criação do BADS e suplementação das rubricas 3.3.90.93 e 3.3.90.46.</p>
+            </div>
+            <div class="phase-card">
+                <span class="phase-days">Fase 4 • Mesa Permanente</span>
+                <h4>Negociação Desmembrada na Casa Civil</h4>
+                <p>Exigir sanção imediata do Pacote Indenizatório e Profilático (impacto zero na LRF) combinada ao cronograma vinculante no PPA/LDO para Nível Superior, Piso de R$ 9.600,00 e BADS (14º Salário).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 6: COMPOSIÇÃO DA CHAPA (CLICÁVEL NATIVO) -->
+    <section id="chapa" class="section-block">
+        <details class="chapa-box" open>
+            <summary class="chapa-summary">
+                <div>
+                    <span class="section-tag">SINDDEGASE — Sindicato dos Profissionais da Carreira Socioeducativa do RJ</span>
+                    <h2 style="font-size:1.45rem; margin-top:0.15rem;">Composição da Chapa Sempre na Luta</h2>
+                </div>
+                <span class="chevron-icon">▼</span>
+            </summary>
+
+            <div class="chapa-grid">
+                <div class="member-item"><div class="member-role">Presidente</div><div class="member-name">Flávio Artur Alves da Cunha</div></div>
+                <div class="member-item"><div class="member-role">Vice-Presidente</div><div class="member-name">Adélia Dionizio da Silva</div></div>
+                <div class="member-item"><div class="member-role">Secretário Geral</div><div class="member-name">Darcy Ferreira da Silva Junior</div></div>
+                <div class="member-item"><div class="member-role">Diretor Financeiro e Patrimonial</div><div class="member-name">Helenivaldo de Souza Alves</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Inativos</div><div class="member-name">Marcos André Tavares de Mello</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Assuntos Jurídicos</div><div class="member-name">Marcos Rodrigues Bastos</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Integração Sindical</div><div class="member-name">Bruno Pereira dos Santos</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Defesa de Classe</div><div class="member-name">Helio Lopes Junior</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Divulgação</div><div class="member-name">Rubens Dias dos Santos Filho</div></div>
+                <div class="member-item"><div class="member-role">Diretora de Atividades Sociais</div><div class="member-name">Patrícia Santana Souza</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Esporte e Lazer</div><div class="member-name">Luíz Humberto Coutinho Coelho</div></div>
+                <div class="member-item"><div class="member-role">Diretor de Mobilização Sindical</div><div class="member-name">Celso Oliveira da Conceição</div></div>
+                <div class="member-item" style="grid-column: 1 / -1;">
+                    <div class="member-role">Conselho de Representantes & Suplentes</div>
+                    <div class="member-name" style="font-weight:500; font-size:0.88rem; margin-top:0.25rem;">
+                        Alexandre Oliveira dos Santos • Darlan Alexandre Barbosa de Oliveira • Deracilmere Rocha Barreto • Flávio Renato Alves da Silva Costa • Felipe Amancio Marinho • José Luiz Machado Vital • Kayser Ambrósgi Lima • Marcelo de Barros Barreto • Paulo Alexandre dos Santos Guerreiro • Wagner Florido de Azevedo | <strong>Suplentes:</strong> Josué de Almeida Borges e Vinicius Alexandre Baptista dos Santos
+                    </div>
+                </div>
+                <div class="member-item" style="grid-column: 1 / -1;">
+                    <div class="member-role">Conselho Fiscal & Suplente</div>
+                    <div class="member-name" style="font-weight:500; font-size:0.88rem; margin-top:0.25rem;">
+                        Rosemberg dos Santos Trianon • Mario Cezar Reis Pimentel Filho • Paulo Roberto | <strong>Suplente:</strong> Bruno Gomes Casadonte
+                    </div>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- SEÇÃO 7: FORMULÁRIO DE SUGESTÕES E COMENTÁRIOS -->
+    <section id="sugestoes" class="section-block">
+        <div class="section-header">
+            <span class="section-tag">Construção Coletiva da Base</span>
+            <h2>Canal Aberto de Sugestões e Comentários</h2>
+            <p>Envie sua proposta, relato de unidade ou contribuição técnica para aprimorar o Plano de Ação da Chapa Sempre na Luta.</p>
+        </div>
+
+        <div class="feedback-container">
+            <form id="suggestionForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nomeServidor">Nome ou Identificação (Opcional)</label>
+                        <input type="text" id="nomeServidor" placeholder="Ex: Agente Silva ou Anônimo">
+                    </div>
+                    <div class="form-group">
+                        <label for="unidadeLotacao">Unidade / Setor de Lotação</label>
+                        <input type="text" id="unidadeLotacao" placeholder="Ex: CENSE Ilha, CRIAD, Sede, Inativo...">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargoCategoria">Cargo / Carreira</label>
+                        <select id="cargoCategoria">
+                            <option value="Agente de Segurança Socioeducativa">Agente de Segurança Socioeducativa</option>
+                            <option value="Pedagogo / Assistente Social / Psicólogo">Equipe Técnica (Pedagogo / Psicólogo / Ass. Social)</option>
+                            <option value="Administrativo / Saúde / Motorista">Administrativo / Saúde / Motorista</option>
+                            <option value="Servidor Inativo / Aposentado">Servidor Inativo / Aposentado</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eixoRelacionado">Eixo Estratégico Relacionado</label>
+                        <select id="eixoRelacionado">
+                            <option value="Eixo 1 - Valorização Salarial e Carreira">Eixo 1 - Valorização Salarial e Carreira</option>
+                            <option value="Eixo 2 - Saúde, Segurança e Escala 24x96">Eixo 2 - Saúde, Segurança e Escala 24x96</option>
+                            <option value="Eixo 3 - Condições das Unidades e Tecnologia">Eixo 3 - Condições das Unidades e Tecnologia</option>
+                            <option value="Eixo 4 - Combate à Precarização e Terceirização">Eixo 4 - Combate à Precarização e Terceirização</option>
+                            <option value="Eixo 5 - Fim das Nomeações Políticas">Eixo 5 - Fim das Nomeações Políticas</option>
+                            <option value="Gestão Sindical / Jurídico">Gestão Sindical / Jurídico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagemSugestao">Sua Sugestão, Demanda ou Comentário *</label>
+                    <textarea id="mensagemSugestao" required placeholder="Descreva sua proposta para a categoria, melhoria nas condições de plantão, pauta jurídica ou comentário sobre o plano..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Registrar Sugestão no Painel</button>
+                <div class="toast" id="formToast">✓ Sugestão registrada com sucesso! Sua contribuição foi adicionada ao mural participativo.</div>
+            </form>
+
+            <div class="suggestions-feed">
+                <div class="feed-header">
+                    <h4>Mural Participativo da Categoria</h4>
+                    <span class="badge-count" id="feedCount">2 registros</span>
+                </div>
+                <div class="feed-list" id="feedList">
+                    <div class="feed-item">
+                        <div class="feed-item-top">
+                            <span class="feed-author">Representação de Base • Plantão 24h</span>
+                            <span class="feed-tag">Eixo 2 - Saúde e Segurança</span>
+                        </div>
+                        <div class="feed-text">Priorizar a exigência legal de efetivo mínimo por plantão nas unidades de internação provisória e o protocolo imediato da Busca 1 (LAI) sobre afastamentos por CID F e M.</div>
+                        <span class="feed-date">Contribuição verificada • Plano de Ação</span>
+                    </div>
+                    <div class="feed-item">
+                        <div class="feed-item-top">
+                            <span class="feed-author">Comissão Técnica • Engenharia Orçamentária</span>
+                            <span class="feed-tag">Eixo 1 - Salário e Carreira</span>
+                        </div>
+                        <div class="feed-text">Destacar na Mesa de Negociação que o Auxílio-Fardamento e o Cartão de Natal (R$ 1.000 + IPCA) saem das rubricas 3.3.90.93 e 3.3.90.46, sem impactar o teto da LRF.</div>
+                        <span class="feed-date">Contribuição verificada • Dossiê Estratégico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>CHAPA SEMPRE NA LUTA — SINDDEGASE</strong> • Sistema Socioeducativo do Estado do Rio de Janeiro</p>
+    <p style="margin-top:0.35rem; font-size:0.8rem;">"Por uma categoria unida, valorizada e com dignidade." • Plano de Ação & Inteligência Probatória (Versão 3)</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Atalhos rápidos que abrem o <details> correspondente automaticamente
+    var jumpLinks = document.querySelectorAll(".jump-link");
+    jumpLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            jumpLinks.forEach(function (l) { l.classList.remove("active"); });
+            link.classList.add("active");
+
+            var targetId = link.getAttribute("data-target");
+            var targetDetails = document.getElementById(targetId);
+            if (targetDetails) {
+                targetDetails.open = true;
+                targetDetails.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+
+    // 2. Botão Expandir / Recolher Todos os Eixos
+    var btnToggleAll = document.getElementById("btnToggleAll");
+    var allOpen = false;
+    if (btnToggleAll) {
+        btnToggleAll.addEventListener("click", function () {
+            allOpen = !allOpen;
+            var allDetails = document.querySelectorAll("details.eixo-card");
+            allDetails.forEach(function (d) {
+                d.open = allOpen;
+            });
+            btnToggleAll.textContent = allOpen ? "Recolher Todos os Eixos" : "Expandir Todos os Eixos";
+        });
+    }
+
+    // 3. Abas clicáveis das 4 Buscas Probatórias
+    var buscaBtns = document.querySelectorAll(".busca-tab-btn");
+    var buscaPanels = document.querySelectorAll(".busca-panel");
+
+    buscaBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            buscaBtns.forEach(function (b) { b.classList.remove("active"); });
+            buscaPanels.forEach(function (p) { p.classList.remove("active"); });
+
+            btn.classList.add("active");
+            var panelId = btn.getAttribute("data-busca");
+            var panel = document.getElementById(panelId);
+            if (panel) {
+                panel.classList.add("active");
+            }
+        });
+    });
+
+    // 4. Formulário de Sugestões e Comentários com armazenamento local seguro
+    var form = document.getElementById("suggestionForm");
+    var feedList = document.getElementById("feedList");
+    var feedCount = document.getElementById("feedCount");
+    var toast = document.getElementById("formToast");
+    var storageKey = "sempre_na_luta_sugestoes_v3";
+
+    function escapeHtml(text) {
+        var map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", """: "&quot;", "'": "&#039;" };
+        return String(text).replace(/[&<>"']/g, function (m) { return map[m]; });
+    }
+
+    function getSavedSuggestions() {
+        try {
+            return JSON.parse(localStorage.getItem(storageKey) || "[]");
+        } catch (err) {
+            return [];
+        }
+    }
+
+    function saveSuggestions(list) {
+        try {
+            localStorage.setItem(storageKey, JSON.stringify(list));
+        } catch (err) {
+            // Fallback silencioso se storage estiver bloqueado
+        }
+    }
+
+    function renderSaved() {
+        var saved = getSavedSuggestions();
+        saved.forEach(function (item) {
+            var div = document.createElement("div");
+            div.className = "feed-item";
+            div.innerHTML =
+                '<div class="feed-item-top">' +
+                    '<span class="feed-author">' + escapeHtml(item.nome) + ' • ' + escapeHtml(item.unidade) + '</span>' +
+                    '<span class="feed-tag">' + escapeHtml(item.eixo) + '</span>' +
+                '</div>' +
+                '<div class="feed-text">' + escapeHtml(item.mensagem) + '</div>' +
+                '<span class="feed-date">' + escapeHtml(item.cargo) + ' • ' + escapeHtml(item.data) + '</span>';
+            feedList.insertBefore(div, feedList.firstChild);
+        });
+        feedCount.textContent = (2 + saved.length) + " registros";
+    }
+
+    renderSaved();
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var nome = document.getElementById("nomeServidor").value.trim() || "Servidor(a) da Base";
+            var unidade = document.getElementById("unidadeLotacao").value.trim() || "Sistema Socioeducativo RJ";
+            var cargo = document.getElementById("cargoCategoria").value;
+            var eixo = document.getElementById("eixoRelacionado").value;
+            var mensagem = document.getElementById("mensagemSugestao").value.trim();
+
+            if (!mensagem) return;
+
+            var now = new Date();
+            var dataStr = now.toLocaleDateString("pt-BR") + " às " + now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+
+            var entry = { nome: nome, unidade: unidade, cargo: cargo, eixo: eixo, mensagem: mensagem, data: dataStr };
+            var saved = getSavedSuggestions();
+            saved.push(entry);
+            saveSuggestions(saved);
+
+            var div = document.createElement("div");
+            div.className = "feed-item";
+            div.style.borderColor = "rgba(234, 179, 8, 0.55)";
+            div.innerHTML =
+                '<div class="feed-item-top">' +
+                    '<span class="feed-author">' + escapeHtml(nome) + ' • ' + escapeHtml(unidade) + '</span>' +
+                    '<span class="feed-tag">' + escapeHtml(eixo) + '</span>' +
+                '</div>' +
+                '<div class="feed-text">' + escapeHtml(mensagem) + '</div>' +
+                '<span class="feed-date">' + escapeHtml(cargo) + ' • Enviado em ' + escapeHtml(dataStr) + '</span>';
+            feedList.insertBefore(div, feedList.firstChild);
+
+            feedCount.textContent = (2 + saved.length) + " registros";
+            form.reset();
+
+            toast.style.display = "block";
+            setTimeout(function () {
+                toast.style.display = "none";
+            }, 5000);
+        });
+    }
+});
+</script>
+
+</body>
+</html>
